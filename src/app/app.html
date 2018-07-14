@@ -1,0 +1,26 @@
+<ion-menu [content]="content">
+
+  <ion-content class="menu-left">
+    <!-- User profile -->
+    <div text-left padding class="gray-bg menu-left">
+      <a menuClose>
+        <img class="profile-picture" src="assets/icon/dot_logo.png">
+        <h4 ion-text color="light">DOH APP</h4>
+      </a>
+    </div>
+
+    
+    <ion-list class="list-full-border">
+      <ion-list-header style="font-size:25px;">Places</ion-list-header>
+      <button ion-item menuClose *ngFor="let page of pages" (click)="openPage(page)">
+        <ion-list-header style="font-size:25px;" *ngIf="page.index === 1">Options</ion-list-header>
+        {{ page.title }}
+        <ion-badge danger item-right *ngIf="page.count">{{ page.count }}</ion-badge>
+      </button>
+      
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
