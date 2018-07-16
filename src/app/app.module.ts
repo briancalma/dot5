@@ -5,9 +5,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {GooglePlus} from '@ionic-native/google-plus';
-
-
-
+import {Facebook} from '@ionic-native/facebook';
 
 
 // import services
@@ -132,7 +130,8 @@ import {AlbayPage} from '../pages/albay/albay';
     ActivityService,
     AttractionService,
     ContactService,
-    GooglePlus
+    GooglePlus,
+    Facebook
 
     /* import services */
   ]

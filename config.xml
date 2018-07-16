@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.pblueit.cities" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.pblueit.dot5" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>travel bicol</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -39,6 +39,11 @@
         <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+        <hook src="hooks/patch-android-studio-check.js" type="before_plugin_install" />
+        <hook src="hooks/patch-android-studio-check.js" type="before_plugin_add" />
+        <hook src="hooks/patch-android-studio-check.js" type="before_build" />
+        <hook src="hooks/patch-android-studio-check.js" type="before_run" />
+        <hook src="hooks/patch-android-studio-check.js" type="before_plugin_rm" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -83,5 +88,10 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-firebase" spec="^1.0.5" />
+    <plugin name="cordova-plugin-facebook4" spec="^2.2.0">
+        <variable name="APP_ID" value="451059082047394" />
+        <variable name="APP_NAME" value="pblue-dot5-app" />
+        <variable name="ANDROID_SDK_VERSION" value="4.+" />
+    </plugin>
     <plugin name="cordova-plugin-googleplus" spec="^5.3.0" />
 </widget>
